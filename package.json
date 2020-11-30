@@ -1,0 +1,45 @@
+{
+  "name": "seed-nodejs",
+  "version": "0.0.1",
+  "private": true,
+
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev" : "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "elastic-apm-node": "^3.8.0",
+    "errorhandler": "^1.5.1",
+    "express": "~4.16.1",
+    "express-winston": "^4.0.5",
+    "http-errors": "~1.8.0",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.20",
+    "morgan": "~1.10.0",
+    "swagger-ui-express": "^4.1.5",
+    "winston": "^3.3.3"
+  },
+  "description": "seed project for node-js",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapiderman/seed-nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "seed"
+  ],
+  "author": "sapiderman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sapiderman/seed-nodejs/issues"
+  },
+  "homepage": "https://github.com/sapiderman/seed-nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
