@@ -9,13 +9,14 @@ const swaggerUi = require('swagger-ui-express');
 const { logger, requestLogger, expressErrorLogger } = require('./utils/logger');
 const swaggerDoc= require('../swagger-docs.json');
 const userRoutes = require('./routes/router');
+const v1Routes = require('./routes/v1router');
 
 
 logger.info('starting app...');
 
 // view engine setup
 app.set('views', path.join(__dirname, './views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // express setup
 app.use(requestLogger);
@@ -28,6 +29,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 // setup custome routes
 app.use('/', userRoutes);
+app.use('/v1', v1Routes);
 
 
 // catch 404 and forward to error handler

@@ -10,6 +10,7 @@ Small starter project to play around with golang features, github actions and va
 | winston           | [logging library](https://github.com/winstonjs/winston)|  
 | express-winston   | [express winston](https://github.com/bithavoc/express-winston) |
 | swagger api       | [API documentations using swagger swagger.io](https://swagger.io/specification/) |  
+| pug template      | [pug template engline](https://pugjs.org/api/getting-started.html) |
 | | |  
 
 ## todo
