@@ -12,7 +12,7 @@ Some experiments with bootstraps and template engines.
 | express-winston   | [express winston](https://github.com/bithavoc/express-winston) |
 | swagger api       | [API documentations using swagger swagger.io](https://swagger.io/specification/) |  
 | pug template      | [pug template engline](https://pugjs.org/api/getting-started.html) |
-| bootstrap         | [bootstrap templates](https://getbootstrap.com/)
+| bootstrap         | [bootstrap framework](https://getbootstrap.com/)
 | | |  
 
 ## todo
