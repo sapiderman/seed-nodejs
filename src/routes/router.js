@@ -1,17 +1,14 @@
 const { Router } = require('express');
 const router = Router();
-
-const { hello, health, bye } = require('../controller');
-
-function doForms(req, res, next) {
-    res.render('forms',{ title: 'Registration form' });
-};
+const { health } = require('../controller');
+const path = require('path');
+const { render } = require('../app');
 
 router.get('/health', health);
-router.get('/v1/hello', hello);
-router.get('/v1/bye', bye);
+router.get("/", (req, res) => {
+    // res.sendFile(path.join(__dirname, '../views/html/home.html'))
+    res.render('home');
+});
 
-router.post('/v1/forms', doForms);
 
-
-module.exports =  router ;
+module.exports = router;

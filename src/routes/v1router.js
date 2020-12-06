@@ -7,10 +7,9 @@ function doForms(req, res, next) {
     res.render('forms',{ title: 'Registration form' });
 };
 
-v1Router.get('/v1/hello', hello);
-v1Router.get('/v1/bye', bye);
+v1Router.get('/hello', hello);
+v1Router.get('/bye', bye);
 
-v1Router.post('/v1/forms', doForms);
-
+v1Router.get('/forms', doForms);
 
 module.exports =  v1Router ;
