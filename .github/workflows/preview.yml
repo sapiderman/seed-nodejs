@@ -1,0 +1,19 @@
+name: Preview
+
+on: push
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Preview Branch
+        uses: sapiderman/branch-preview
+        with:
+          PRIVATE_KEY: ${{ secrets.DOKKU_KEY }}
+          HOST: ${{ secrets.HOST }}
+          DOMAIN_NAME: ${{ secrets.DOMAIN }}
