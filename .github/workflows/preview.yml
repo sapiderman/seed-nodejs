@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Preview Branch
-        uses: sapiderman/branch-preview-action
+        uses: github/sapiderman/branch-preview-action@main
         with:
           PRIVATE_KEY: ${{ secrets.DOKKU_KEY }}
           HOST: ${{ secrets.HOST }}

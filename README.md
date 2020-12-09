@@ -52,7 +52,6 @@ npm run test
 ## project structure
 
 ├── node_modules  
-|  
 ├── src  
 │   ├── bin  
 │   ├── config  
@@ -71,7 +70,8 @@ npm run test
 | Services                      | Status                                                                       |  
 | :-----------------------------| :-----------------------------------------------------------:                     |  
 | [azure](dev.azure.com)        | [![Build Status](https://dev.azure.com/sapiderman/seed-nodejs/_apis/build/status/sapiderman.seed-nodejs?repoName=sapiderman%2Fseed-nodejs&branchName=main)](https://dev.azure.com/sapiderman/seed-nodejs/_build/latest?definitionId=8&repoName=sapiderman%2Fseed-nodejs&branchName=main) |  
-|            |                            |  
+|               |                            |  
+|               |                           |
 
 
 ---
