@@ -14,6 +14,6 @@ jobs:
       - name: Preview Branch
         uses: sapiderman/branch-preview-action@v0.3
         with:
-          PRIVATE_KEY: ${{ secrets.DOKKU_KEY }}
-          HOST: ${{ secrets.HOST }}
-          DOMAIN_NAME: ${{ secrets.DOMAIN }}
+          dokku_key: ${{ secrets.DOKKU_KEY }}
+          host: ${{ secrets.HOST }}
+          domain: ${{ secrets.DOMAIN }}
