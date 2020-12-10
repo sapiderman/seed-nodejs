@@ -3,7 +3,7 @@ const os = require('os');
 
 const SECONDS_IN_DAY = 3600 * 24;
 const SECONDS_IN_HOUR = 3600;
-const SECONDS_IN_MINUTE = 36;
+const SECONDS_IN_MINUTE = 60;
 const MEGABYTE = 1048576;
 
 /**
