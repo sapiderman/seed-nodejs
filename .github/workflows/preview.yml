@@ -22,5 +22,5 @@ jobs:
           dokku_key: ${{ secrets.DOKKU_KEY }}
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          domain: ${{ secrets.DOMAIN }}
+          sudomain: ${{ secrets.DOMAIN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
