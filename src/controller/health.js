@@ -15,8 +15,8 @@ function upTimeString() {
     const uptimedat = process.uptime();
 
     const day = Math.floor(uptimedat / SECONDS_IN_DAY);
-    const hours = Math.floor(uptimedat / SECONDS_IN_HOUR);
-    const minutes = Math.floor(uptimedat / SECONDS_IN_MINUTE);
+    const hours = Math.floor((uptimedat / SECONDS_IN_HOUR) % 24);
+    const minutes = Math.floor((uptimedat / SECONDS_IN_MINUTE) % 60);
     const seconds = Math.floor(uptimedat % 60);
 
     return (
@@ -44,6 +44,7 @@ function health(req, res) {
             name: "server",
             status: "up",
             uptime: upTimeString(),
+            uptimeRaw: process.uptime(),
         },
         {
             name: "mongodb",

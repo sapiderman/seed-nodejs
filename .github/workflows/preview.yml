@@ -1,4 +1,4 @@
-name: Preview
+name: Branch-Preview-SeedNode
 
 on: 
   push:
