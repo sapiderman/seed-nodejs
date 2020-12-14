@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
-    "test": "NODE_ENV=development mocha ./test/unit --recursive" 
+    "test": "NODE_ENV=development mocha ./test/unit --recursive"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -17,7 +17,6 @@
     "express": "~4.16.1",
     "express-winston": "^4.0.5",
     "http-errors": "~1.8.0",
-    "jade": "~1.11.0",
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "morgan": "~1.10.0",
