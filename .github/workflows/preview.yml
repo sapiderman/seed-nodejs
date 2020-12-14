@@ -16,11 +16,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Preview Branch
-        uses: sapiderman/branch-preview-action@main
+#      - name: Mine Preview Branch
+#        uses: sapiderman/branch-preview-action@main
+        #  with:  
+        #   dokku_key: ${{ secrets.DOKKU_KEY }}
+        #   host: ${{ secrets.HOST }}
+        #   port: ${{ secrets.PORT }}
+        #   sudomain: ${{ secrets.DOMAIN }}
+        #   github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Hyperjump Branch-Preview Action
+        uses: hyperjumptech/branch-preview@v1.0.0
         with:
           dokku_key: ${{ secrets.DOKKU_KEY }}
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          sudomain: ${{ secrets.DOMAIN }}
+          domain: ${{ secrets.DOMAIN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
