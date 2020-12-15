@@ -17,6 +17,8 @@ logger.info('.env loaded...');
 // export const apmEnable = process.env.ELASTIC_APM_ENABLE || 'false';
 
 const config = {
+    name: process.env.NAME || 'SEED-ENV-UNSET',
+    version: process.env.VERSION || '0.0.0-dev',
     env: process.env.NODE_ENV || 'development',
     app: {
         port: process.env.PORT || '3000',

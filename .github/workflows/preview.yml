@@ -9,26 +9,26 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy Preview
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-#      - name: Mine Preview Branch
-#        uses: sapiderman/branch-preview-action@main
-        #  with:  
-        #   dokku_key: ${{ secrets.DOKKU_KEY }}
-        #   host: ${{ secrets.HOST }}
-        #   port: ${{ secrets.PORT }}
-        #   sudomain: ${{ secrets.DOMAIN }}
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Hyperjump Branch-Preview Action
-        uses: hyperjumptech/branch-preview@v1.0.0
-        with:
+     - name: Mine Preview Branch
+       uses: sapiderman/branch-preview-action@main
+         with:  
           dokku_key: ${{ secrets.DOKKU_KEY }}
-          host: 139.59.227.176
-          domain: beta
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          sudomain: ${{ secrets.DOMAIN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Hyperjump Branch-Preview Action
+      #   uses: hyperjumptech/branch-preview@v1.0.0
+      #   with:
+      #     dokku_key: ${{ secrets.DOKKU_KEY }}
+      #     host: 139.59.227.176
+      #     domain: beta
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
