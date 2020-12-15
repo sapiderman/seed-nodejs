@@ -19,7 +19,7 @@ jobs:
       - name: Mine Preview Branch
         uses: sapiderman/branch-preview-action@main
         with:
-              dokku_key: ${{ secrets.DOKKU_KEY }}
+          dokku_key: ${{ secrets.DOKKU_KEY }}
           host: 139.59.227.176
           port: 22
           sudomain: beta
