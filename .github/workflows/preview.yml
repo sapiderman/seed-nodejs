@@ -20,9 +20,9 @@ jobs:
        uses: sapiderman/branch-preview-action@main
          with:  
           dokku_key: ${{ secrets.DOKKU_KEY }}
-          host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          sudomain: ${{ secrets.DOMAIN }}
+          host: 139.59.227.176
+          port: 22
+          sudomain: beta
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Hyperjump Branch-Preview Action

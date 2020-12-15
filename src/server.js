@@ -2,6 +2,8 @@
 // import { start } from 'elastic-apm-node';
 // import  logger  from './utils/logger';
 
+'use strict';
+
 const { config } = require('./config/config');
 const apm = require('elastic-apm-node');
 const { logger } = require('./utils/logger');
@@ -18,7 +20,7 @@ const app = require('./app');
 const errorHandler = require('errorhandler');
 
 // Error Handler. Provides full stack - use only i nevelopment
-if (process.env.NODE_ENV === "development") {
+if (config.NODE_ENV === "development") {
     use(errorHandler());
 }
 

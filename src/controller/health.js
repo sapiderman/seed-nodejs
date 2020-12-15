@@ -1,6 +1,6 @@
 const process = require('process');
 const os = require('os');
-const config = require('../config/config.js');
+const { config } = require('../config/config.js');
 
 const SECONDS_IN_DAY = 3600 * 24;
 const SECONDS_IN_HOUR = 3600;
@@ -37,8 +37,9 @@ function health(req, res) {
 
     return res.json({
         status: "ALIVE!",
-        version: config.version,
         name: config.name,
+        version: config.version,
+
         timestamp: Date.now(),
         osUpTime: os.uptime(),
         freemem: freeMB + " / " + totalMB + " MB",
