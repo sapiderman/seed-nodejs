@@ -15,12 +15,11 @@ name: Lint Code Base
 #############################
 on:
   push:
-    # branches-ignore: [main]
-    # Remove the line above to run when pushing to main
+  # branches-ignore: [main]
+  # Remove the line above to run when pushing to main
   pull_request:
     branches: [main]
   workflow_dispatch:
-    
 
 ###############
 # Set the Job #

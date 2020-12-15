@@ -1,10 +1,10 @@
 # PR request template
 
-## PR type  
+## PR type
 
 - [ ] feature
 - [ ] bugfix
-- [ ] others:  
+- [ ] others:
 
 ### what issue does this pr address
 
