@@ -1,4 +1,4 @@
-name: Branch-Preview-SeedNode
+name: Branch-Preview-Seed
 
 on:
   push:
@@ -20,10 +20,11 @@ jobs:
         uses: sapiderman/branch-preview-action@main
         with:
           dokku_key: ${{ secrets.DOKKU_KEY }}
-          host: 139.59.227.176
-          port: 22
-          sudomain: beta
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT}}
+          sudomain: $${{ secrets.SUBDOMAIN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          
       # - name: Hyperjump Branch-Preview Action
       #   uses: hyperjumptech/branch-preview@v1.0.0
       #   with:

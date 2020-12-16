@@ -36,7 +36,8 @@ function health(req, res) {
     const totalMB = Math.round(os.totalmem() / MEGABYTE);
 
     return res.json({
-        status: "ALIVE!",
+        ok: true, // http status OK
+        health: "ALIVE!",
         name: config.name,
         version: config.version,
 
