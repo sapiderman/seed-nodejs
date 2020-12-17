@@ -21,8 +21,8 @@ jobs:
         with:
           dokku_key: ${{ secrets.DOKKU_KEY }}
           host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT}}
-          sudomain: beta
+          port: ${{ secrets.PORT }}
+          sudomain: ${{ secrets.PORT }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
       # - name: Hyperjump Branch-Preview Action
