@@ -63,7 +63,8 @@ npm run test
 │   ├── utils  
 │   └── views  
 └── test  
-    └── bin   
+    └── unit
+ 
 
 ## integrations  
 
