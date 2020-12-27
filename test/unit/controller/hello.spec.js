@@ -7,7 +7,7 @@ const request = require('supertest');
 const app = express();
 
 
-describe('GET /hello', () => {
+describe('GET /hello /bye ', () => {
 
     app.use("/v1/hello", hello);
     app.use("/v1/bye", bye);
@@ -18,7 +18,6 @@ describe('GET /hello', () => {
         const result = await request(app).get('/v1/hello');
         expect(result.status).to.equal(200);
         expect(result.res.text).not.empty;  // check the renders exist
-
     });
 
     it('should render a bye page', async () => {

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
-    "test": "NODE_ENV=development mocha ./test/unit --recursive"
+    "test": "mocha ./test/unit --recursive"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -22,7 +22,7 @@
     "morgan": "~1.10.0",
     "popper.js": "^1.16.1",
     "pug": "^3.0.0",
-    "swagger-ui-express": "^4.1.5",
+    "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3"
   },
   "description": "seed project for node-js",
