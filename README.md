@@ -6,7 +6,7 @@ Some experiments with bootstraps and template engines.
 ## Features
 
 | Features          | Description                                                                       |  
-| :---------------- | :-----------------------------------------------------------:                     |  
+| :---------------- | :----------------------------------------------------------------------:          |  
 | express           | [express framework](https://expressjs.com/)                                       |  
 | winston           | [logging library](https://github.com/winstonjs/winston)                           |  
 | express-winston   | [express winston](https://github.com/bithavoc/express-winston)                    |  
@@ -76,4 +76,4 @@ npm run test
 
 
 ---
-fork. clone. contribute and share!  
+fork. clone. share.

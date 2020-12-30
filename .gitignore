@@ -227,4 +227,8 @@ dist
 .history
 .ionide
 
+# ignore test report 
+test-result.xml
+
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,intellij
