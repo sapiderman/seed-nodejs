@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm test
+      - run: npm run test
 
       - name: Build docker
         run: docker build . --file ./Dockerfile -t seed-nodejs-img:$(date +%s)
