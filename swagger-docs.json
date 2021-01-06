@@ -1,5 +1,5 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.2",
   "info": {
     "description": "Starter API docs",
     "version": "0.0.1",
@@ -7,10 +7,6 @@
     "contact": {
       "email": "you@your-company.com"
     },
-    "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
   },
   "tags": [
     {
@@ -37,18 +33,19 @@
           "general"
         ],
         "summary": "health check",
-        "operationId": "healthCheck",
+        "operationId": "healthCheckId",
         "description": "Check service health. is it alive? is it healthy?\n",
-        "produces": [
-          "application/json"
-        ],
         "responses": {
           "200": {
             "description": "search results matching criteria",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/healthCheckDef"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schema/healthSchema"
+                  }
+                }
               }
             }
           }
@@ -86,23 +83,25 @@
       }
     }
   },
-    "definitions": {
-      "healthCheckDef": {
-        "required": [
-          "status",
-          "uptime"
-        ],
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "UP"
-          },
-          "uptime": {
-            "type": "string",
-            "format": "time",
-            "example": "1 day 2 hours"
+    "components": {
+      "schemas": {
+        "healthCheckSchema": {
+          "required": [
+            "status",
+            "uptime"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "UP"
+            },
+            "uptime": {
+              "type": "string",
+              "format": "time",
+              "example": "1 day 2 hours"
+            }
           }
         }
-      }
+      }      
     }
 }

@@ -25,9 +25,12 @@ const config = {
         host: process.env.HOST || 'localhost',
     },
     db: {
-        host: 'localhost',
-        port: 27017,
-        name: 'db'
+        host: process.env.MONGODB_HOST || 'localhost',
+        port: process.env.MONGODB_HOST || 27017,
+        name: process.env.MONGODB_NAME || 'seedDb'
+    },
+    apm: {
+        enable: process.env.ELASTIC_APM_ENABLE || 'false',
     }
 };
 
