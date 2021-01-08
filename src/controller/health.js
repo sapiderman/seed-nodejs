@@ -1,6 +1,6 @@
-const process = require('process');
-const os = require('os');
-const { config } = require('../config/config.js');
+import process from 'process';
+import os from 'os';
+import config from '../config/config.js';
 
 const SECONDS_IN_DAY = 3600 * 24;
 const SECONDS_IN_HOUR = 3600;
@@ -61,6 +61,4 @@ function health(req, res) {
 };
 
 
-module.exports = {
-    health
-}
+export default health;

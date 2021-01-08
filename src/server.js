@@ -1,23 +1,16 @@
-// import config  from './config/config';
-// import { start } from 'elastic-apm-node';
-// import  logger  from './utils/logger';
-
 'use strict';
 
-const { config } = require('./config/config');
-const apm = require('elastic-apm-node');
-const { logger } = require('./utils/logger');
+ import config from './config/config.js';
+// import { start } from 'elastic-apm-node';
+ import { logger } from './utils/logger.js';
+ import app from './app.js';
+ import errorHandler from 'errorhandler';
 
+ 
 if (process.env.ELASTIC_APM_ENABLE == true) {
     logger.info('apm starting up');
     start();
 }
-
-//import { use, listen } from './app';
-// import errorHandler from 'errorhandler';
-
-const app = require('./app');
-const errorHandler = require('errorhandler');
 
 // Error Handler. Provides full stack - use only i nevelopment
 if (config.NODE_ENV === "development") {
@@ -25,7 +18,7 @@ if (config.NODE_ENV === "development") {
 }
 
 const server = app.listen(config.app.port, () => {
-    logger.info(`starting server on: ${config.app.host}:${config.app.port}`);
+    logger.info(`server started on: ${config.app.host}:${config.app.port}`);
     logger.info('ctrl+c to cancel/stop');
 });
 
@@ -49,6 +42,6 @@ const stopServer = async () => {
 process.on('SIGINT', stopServer);
 process.on('SIGTERM', stopServer);
 
-// export default server;
-module.exports = server;
+export default server;
+
 

@@ -1,7 +1,7 @@
-// const config = require("config")
-const winston = require('winston');
+'use strict'
+import winston from 'winston';
+import expressWinston from 'express-winston';
 const { combine, splat, timestamp, printf } = winston.format;
-const expressWinston = require('express-winston');
 
 const myFormat = printf(({ level, message, timestamp, ...metadata }) => {
   let msg = `${timestamp} [${level}] : ${message} `
@@ -52,7 +52,8 @@ const expressErrorLogger = expressWinston.errorLogger({
 
 logger.info('logging initialized...');
 
-module.exports = {
+// export default logger;
+export {
   logger,
   requestLogger,
   expressErrorLogger

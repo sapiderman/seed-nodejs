@@ -2,10 +2,10 @@
   "name": "seed-nodejs",
   "version": "0.0.1",
   "private": true,
-  
+  "type": "module",  
   "scripts": {
-    "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js",
+    "start": "node --experimental-json-modules ./src/server.js",
+    "dev": "nodemon --experimental-json-modules ./src/server.js",
     "test": "mocha ./test/unit --recursive",
     "coverage": "nyc --reporter cobertura mocha ./test/unit --recursive --reporter mocha-junit-reporter"
   },

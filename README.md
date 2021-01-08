@@ -15,6 +15,17 @@ Some experiments with bootstraps and template engines.
 | bootstrap         | [bootstrap framework](https://getbootstrap.com/)                                  |  
 | | |  
 
+## endpoints
+
+
+| endpoint         | desciption         |
+| :--------------- | :------------------|
+| GET /            | index              | 
+| GET/health       | get healtcheck     |  
+| GET /v1/hello    | hello              |
+|                  |                    |
+
+
 ## todo
 
 - circuit breaker
@@ -63,7 +74,8 @@ npm run test
 │   ├── utils  
 │   └── views  
 └── test  
-    └── unit
+    └── unit  
+   
  
 
 ## integrations  
@@ -72,7 +84,7 @@ npm run test
 | :-----------------------------| :-----------------------------------------------------------:                     |  
 | [azure](dev.azure.com)        | [![Build Status](https://dev.azure.com/sapiderman/seed-nodejs/_apis/build/status/sapiderman.seed-nodejs?repoName=sapiderman%2Fseed-nodejs&branchName=main)](https://dev.azure.com/sapiderman/seed-nodejs/_build/latest?definitionId=8&repoName=sapiderman%2Fseed-nodejs&branchName=main) |  
 |               |                            |  
-|               |                           |
+
 
 
 ---

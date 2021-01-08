@@ -1,7 +1,7 @@
-const { Router } = require('express');
+import { Router } from 'express';
 const v1Router = Router();
 
-const { hello, bye } = require('../controller');
+import { hello, bye } from '../controller/index.js';
 
 function doForms(req, res, next) {
     res.render('forms',{ title: 'Registration form' });
@@ -12,4 +12,4 @@ v1Router.get('/bye', bye);
 
 v1Router.get('/forms', doForms);
 
-module.exports =  v1Router ;
+export default v1Router;

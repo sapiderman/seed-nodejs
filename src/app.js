@@ -1,18 +1,20 @@
 'use strict';
 
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
 
 const app = express();
-const swaggerUi = require('swagger-ui-express');
+import { logger, requestLogger, expressErrorLogger } from './utils/logger.js';
+import userRoutes from './routes/router.js';
+import v1Routes from './routes/v1router.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDoc from '../swagger-docs.json';
 
-const { logger, requestLogger, expressErrorLogger } = require('./utils/logger');
-const swaggerDoc= require('../swagger-docs.json');
-const userRoutes = require('./routes/router');
-const v1Routes = require('./routes/v1router');
-
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 logger.info('starting app...');
 
@@ -51,4 +53,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+export default app;

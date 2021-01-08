@@ -1,14 +1,11 @@
-const { Router } = require('express');
+import { Router } from 'express';
+import health from '../controller/health.js';
 const router = Router();
-const { health } = require('../controller');
-const path = require('path');
-const { render } = require('../app');
 
 router.get('/health', health);
-router.get("/", (req, res) => {
-    // res.sendFile(path.join(__dirname, '../views/html/home.html'))
+router.get("/", (req, res) => {    
     res.render('home');
 });
 
 
-module.exports = router;
+export default router;

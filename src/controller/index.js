@@ -1,8 +1,8 @@
-const { hello } = require('./hello');
-const { health } = require('./health');
-const { bye } = require('./bye');
+import hello from './hello.js';
+import health from './health.js';
+import bye from './bye.js';
 
-module.exports = {
+export  {
     hello,
     bye,
     health
