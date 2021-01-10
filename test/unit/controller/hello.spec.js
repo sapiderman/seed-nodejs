@@ -1,10 +1,17 @@
 'use strict';
-const { expect } = require('chai');
-const { hello, bye } = require('../../../src/controller');
-const path = require('path');
-const express = require('express');
-const request = require('supertest');
+
+import chai from 'chai';
+import express from 'express';
+import request from 'supertest';
+import path from 'path';
+import { hello, bye } from '../../../src/controller/index.js';
+
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const expect = chai.expect;
 const app = express();
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 describe('GET /hello /bye ', () => {

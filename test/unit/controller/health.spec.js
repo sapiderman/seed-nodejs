@@ -1,9 +1,11 @@
 'use strict';
-const chai = require('chai');
-const { expect } = chai;
-const { health } = require('../../../src/controller');
-const express = require('express');
-const request = require('supertest');
+
+import chai from 'chai';
+import express from 'express';
+import request from 'supertest';
+import chaijson from 'chai-json-schema';
+import health from '../../../src/controller/health.js';
+const expect = chai.expect;
 const app = express();
 
 describe('GET /health', () => {
@@ -29,7 +31,7 @@ describe('GET /health', () => {
     }
    
     app.use("/health", health);
-    chai.use(require('chai-json-schema'));
+    chai.use(chaijson);
 
     it('should return json health', async () => {
         const result = await request(app).get('/health');

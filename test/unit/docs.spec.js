@@ -1,11 +1,15 @@
 'use strict';
-const chai = require('chai');
-const { expect } = chai;
-const express = require('express');
-const request = require('supertest');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDoc= require('../../swagger-docs.json');
+
+import chai from 'chai';
+import express from 'express';
+import request from 'supertest';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDoc from '../../swagger-docs.json';
+
+const expect = chai.expect;
 const app = express();
+
+
 
 describe('GET /docs',  () => {
 
