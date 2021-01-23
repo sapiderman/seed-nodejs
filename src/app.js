@@ -4,6 +4,7 @@ import createError from 'http-errors';
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import status from 'express-status-monitor';
 
 const app = express();
 import { logger, requestLogger, expressErrorLogger } from './utils/logger.js';
@@ -23,6 +24,7 @@ app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'pug');
 
 // express setup
+app.use(status());
 app.use(requestLogger);
 app.use(expressErrorLogger);
 app.use(express.json());
