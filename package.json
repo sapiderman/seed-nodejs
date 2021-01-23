@@ -10,7 +10,7 @@
     "coverage": "nyc --reporter cobertura mocha ./test/unit --recursive --reporter mocha-junit-reporter"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "cookie-parser": "~1.4.4",
     "debug": "~4.3.2",
     "dotenv": "^8.2.0",
