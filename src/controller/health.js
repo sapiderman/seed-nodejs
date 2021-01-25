@@ -25,6 +25,18 @@ function upTimeString() {
     );
 }
 
+let lastMethod='not set';
+let lastTime='not set';
+let lastRoute='not set';
+
+function healthLogger(req, res, next){
+    lastMethod = req.method;
+    lastTime = Date.now();
+    lastRoute = req.route;
+
+    next();
+};
+
 /**
  * health check handler
  * @params - {object}req, {object}res
@@ -56,9 +68,18 @@ function health(req, res) {
             uptime: "0",
         }
         ],
+        lastCommand: {
+            method: lastMethod,
+            api: lastRoute,
+            time: lastTime,
+        }
 
     });
 };
 
 
 export default health;
+
+export {
+    healthLogger
+};

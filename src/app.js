@@ -13,6 +13,8 @@ import v1Routes from './routes/v1router.js';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDoc from '../swagger-docs.json';
 
+import { healthLogger } from './controller/health.js';
+
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -25,6 +27,7 @@ app.set('view engine', 'pug');
 
 // express setup
 app.use(status());
+app.use(healthLogger);
 app.use(requestLogger);
 app.use(expressErrorLogger);
 app.use(express.json());
