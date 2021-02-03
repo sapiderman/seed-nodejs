@@ -18,9 +18,10 @@ describe('GET /v1/time', () => {
         reqstub.returns({ body: 'horaaay', status: 200 });
 
         const result = request.get('/v1/time');
-        console.log('test: ', result.body);
         expect(result.status).to.equal(200);
         expect(reqstub.calledOnce).to.be.true;
+
+        reqstub.restore();
 
     });
 });

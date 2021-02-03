@@ -7,7 +7,7 @@
     "start": "node --experimental-json-modules ./src/server.js",
     "dev": "nodemon --experimental-json-modules ./src/server.js",
     "test": "mocha --experimental-json-modules ./test/unit --recursive",
-    "coverage": "nyc --reporter cobertura mocha ./test/unit --recursive --reporter mocha-junit-reporter"
+    "coverage": "nyc --reporter cobertura mocha --experimental-json-modules ./test/unit --recursive --reporter mocha-junit-reporter"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",

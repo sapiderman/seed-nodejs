@@ -229,6 +229,7 @@ dist
 
 # ignore test report 
 test-result.xml
+test-results.xml
 
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,intellij
