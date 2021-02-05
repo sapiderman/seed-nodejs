@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/sapiderman/seed-nodejs#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.0",
     "chai-json-schema": "^1.5.1",
     "cypress": "^6.4.0",
     "mocha": "^8.2.1",
